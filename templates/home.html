@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Sup{% endblock %}
+
+{% block content %}
+
+<h1>Boggle!!</h1>
+<table>
+    {% for x in board %}
+        <tr>
+            {% for y in x %}
+                <td>{{y}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+</table>
+<br>
+<form id = 'asl'>
+    <input type = 'text' id = "guess" name = "guess" placeholder = "Feelin' Lucky?">
+    <button>Guess!</button>
+</form>
+
+{% endblock %}
